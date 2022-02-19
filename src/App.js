@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect} from 'react';
+import { Routes, Route } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+
+//components
+import Home from './components/layout/Home/Home';
+import Signup from './components/register/Signup';
+import Login from './components/register/Login';
+
+//styles
+import "./styles/app.scss"
+
 
 function App() {
+
+  //===============login client test======================
+
+    const navigate = useNavigate()
+
+    useEffect(()=>{
+      console.log(localStorage.length);
+      !localStorage.length && navigate("/Login" ,{replace : true})
+    },[])
+  //===============login client test======================
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/home" element={<Home/>}/>
+        <Route path="/Signup" element={<Signup/>}/>
+        <Route path="/Login" element={<Login/>}/>
+      </Routes>
+    </>
   );
 }
 

@@ -1,0 +1,17 @@
+.appBar{
+    background-color: transparent !important;
+    backdrop-filter: blur(20px) saturate(140%) brightness(70%) !important;
+    position: fixed !important;
+    top: 0px !important;
+    .logo{
+        height: 50px;
+        border-radius: 5px;
+    }
+    .menuItem{
+        margin-right: 10px;
+        font-size: 17px;
+    }
+    .menuItem:hover{
+        background-color:#6e6e6e !important ;
+    }
+}

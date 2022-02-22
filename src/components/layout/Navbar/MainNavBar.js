@@ -130,7 +130,7 @@ const MainNavBar = () => {
                             sx={{ my: 2, color: 'white', display: 'block' }}
                             className='menuItem'
                         >
-                            <Link to="/home/" className='main-menu-link'>
+                            <Link to="/home/mainPage/" className='main-menu-link'>
                                 Home
                             </Link>
                         </Button>

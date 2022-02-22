@@ -35,7 +35,7 @@ const PhoneNav = () => {
                 }}
                 className='PhoneNav'
             >
-                <BottomNavigationAction label="Home" icon={<HomeIcon />} onClick={()=> handleLink("/home/")}/>
+                <BottomNavigationAction label="Home" icon={<HomeIcon />} onClick={()=> handleLink("/home/mainPage/")}/>
                 <BottomNavigationAction label="Open Banking" icon={<AccountBalanceIcon/>} onClick={()=> handleLink("/home/")}/>
                 <BottomNavigationAction label="GOV" icon={<ContentPasteGoIcon/>}  onClick={()=> handleLink("/home/")} />
                 <BottomNavigationAction label="Profile" icon={<AccountCircleIcon/>} onClick={()=> handleLink("/home/profile/")}  />

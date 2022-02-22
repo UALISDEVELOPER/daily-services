@@ -27,10 +27,13 @@ const Home = () => {
                 screenWidth > 600 ?
                 <div>
                 <MainNavBar/>
-                <br/><br/><br/><br/>
+                <br/><br/><br/><br/><br/>
                 </div>
                 :
-                <PhoneNav/>
+                <div>
+                    <br/>
+                    <PhoneNav/>
+                </div>
             }
             <Routes>
                 <Route path="/profile/" element={<Profile/>}/>

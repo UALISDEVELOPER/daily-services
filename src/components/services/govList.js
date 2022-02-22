@@ -1,10 +1,10 @@
 //icons
-import taxIcon from "./styles/img/tax-inquiry.png";
-import taxRegisterIcon from "./styles/img/tax-register.png";
-import addressIcon from "./styles/img/direction.png";
-import mobileIcon from "./styles/img/mobile.png";
-import billsIcon from "./styles/img/bill.png";
-import insuranceIcon from "./styles/img/insurance.png";
+import taxIcon from "./styles/img/GOV-IMG/tax-inquiry.png";
+import taxRegisterIcon from "./styles/img/GOV-IMG/tax-register.png";
+import addressIcon from "./styles/img/GOV-IMG/direction.png";
+import mobileIcon from "./styles/img/GOV-IMG/mobile.png";
+import billsIcon from "./styles/img/GOV-IMG/bill.png";
+import insuranceIcon from "./styles/img/GOV-IMG/insurance.png";
 
 
 export const GovList = [
@@ -28,19 +28,19 @@ export const GovList = [
     },
     {
         title : "Tls Order Etc",
-        decription : "This service is used to purchase mobile recharge",
+        decription : "This service can be used to purchase mobile recharge",
         icon : mobileIcon,
         key : 4
     },
     {
         title : "Pay bills",
-        decription : "This service is used to pay bills",
+        decription : "This service can be used to pay bills",
         icon : billsIcon,
         key : 5
     },
     {
         title : "insured history inquiry",
-        decription : "This service is used to inquire about social security insurance records",
+        decription : "This service can be used to inquire about social security insurance records",
         icon : insuranceIcon,
         key : 6
     },

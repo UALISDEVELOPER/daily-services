@@ -139,14 +139,18 @@ const MainNavBar = () => {
                             sx={{ my: 2, color: 'white', display: 'block' }}
                             className='menuItem'
                         >
-                            Open Banking
+                            <Link to="/home/openBanking/" className='main-menu-link'>
+                                Open Banking
+                            </Link>
                         </Button>
                         <Button
                             onClick={handleCloseNavMenu}
                             sx={{ my: 2, color: 'white', display: 'block' }}
                             className='menuItem'
                         >
-                            GOV
+                            <Link to="/home/Gov/" className='main-menu-link'>
+                                GOV
+                            </Link>
                         </Button>
                     </Box>
 

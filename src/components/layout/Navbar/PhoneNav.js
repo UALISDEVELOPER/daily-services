@@ -1,4 +1,4 @@
-import React, {useState}  from 'react';
+import React, {useEffect, useState}  from 'react';
 import { useNavigate, Link } from "react-router-dom";
 
 
@@ -19,6 +19,19 @@ const PhoneNav = () => {
 
     const [value, setValue] = useState(0);
 
+    useEffect(()=>{
+        console.log(window.location.pathname);  
+        console.log(value);
+        if(window.location.pathname ==="/home/mainPage/"){
+            setValue(0)
+        }else if (window.location.pathname ==="/home/openBanking/"){
+            setValue(1)
+        }else if (window.location.pathname === "/home/Gov/"){
+            setValue(2)
+        }else if(window.location.pathname === "/home/profile/"){
+            setValue(3)
+        }
+    },[window.location.pathname])
 
     const navigate = useNavigate();
     const handleLink = (link) =>{
@@ -36,8 +49,8 @@ const PhoneNav = () => {
                 className='PhoneNav'
             >
                 <BottomNavigationAction label="Home" icon={<HomeIcon />} onClick={()=> handleLink("/home/mainPage/")}/>
-                <BottomNavigationAction label="Open Banking" icon={<AccountBalanceIcon/>} onClick={()=> handleLink("/home/")}/>
-                <BottomNavigationAction label="GOV" icon={<ContentPasteGoIcon/>}  onClick={()=> handleLink("/home/")} />
+                <BottomNavigationAction label="Open Banking" icon={<AccountBalanceIcon/>} onClick={()=> handleLink("/home/openBanking/")}/>
+                <BottomNavigationAction label="GOV" icon={<ContentPasteGoIcon/>}  onClick={()=> handleLink("/home/Gov/")} />
                 <BottomNavigationAction label="Profile" icon={<AccountCircleIcon/>} onClick={()=> handleLink("/home/profile/")}  />
             </BottomNavigation>
         </div>

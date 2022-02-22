@@ -8,6 +8,8 @@ import PhoneNav from '../Navbar/PhoneNav';
 //components
 import Profile from '../profile/Profile';
 import MainPage from './MainPage';
+import OpenBanking from '../../services/OpenBanking';
+import Gov from '../../services/Gov';
 
 //style
 import "./style/home.scss"
@@ -38,6 +40,8 @@ const Home = () => {
             <Routes>
                 <Route path="/profile/" element={<Profile/>}/>
                 <Route path="/mainPage/" element={<MainPage/>}/>
+                <Route path="/openBanking/" element={<OpenBanking/>}/>
+                <Route path="/Gov/" element={<Gov/>}/>
             </Routes>
         </div>
     );

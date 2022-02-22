@@ -100,7 +100,7 @@ const Login = () => {
                     if(response.data.status === 200){
                         localStorage.setItem("user", loginData.email)
                         localStorage.setItem("pass", loginData.password)
-                        navigate("/home" , {replace : true})
+                        navigate("/home/mainPage/" , {replace : true})
                         setLoading(false);
                     }else{
                         setSnackBar({...snackBar, message :"Something went wrong" , severity: "warning" , autoHideDuration : 20000})

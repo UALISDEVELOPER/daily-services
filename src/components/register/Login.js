@@ -99,6 +99,7 @@ const Login = () => {
                     console.log(response);
                     if(response.data.status === 200){
                         localStorage.setItem("user", loginData.email)
+                        localStorage.setItem("pass", loginData.password)
                         navigate("/home" , {replace : true})
                         setLoading(false);
                     }else{
@@ -163,7 +164,7 @@ const Login = () => {
                         {error.password && focused.password && <span>{error.password}</span>}
                         <Grid xs={12}>
                             <button onClick={sendData}>Login</button>
-                            <p className='link'><Link to="/Signup">Dont have an Account ? Sinup</Link></p>
+                            <p className='link'><Link to="/Signup">Dont have an Account ? Signup</Link></p>
                         </Grid>
                     </Grid>
                 </Grid>

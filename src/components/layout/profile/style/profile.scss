@@ -1,0 +1,104 @@
+.profileBox{
+    margin-top: 70px;
+    height: 500px;
+    backdrop-filter: blur(2px) saturate(150%) brightness(60%) !important;
+    // padding-top: 10px;
+    padding-bottom: 10px;
+    // padding-left: 30px;
+    // padding-right: 30px;
+    border-radius: 5px;
+    text-align: center;
+    .profile-heading-div{
+        width: 100%;
+        height: 180px;
+        background: rgb(121, 28, 155);
+        background: linear-gradient(141deg, rgba(121, 28, 155, 0.87) 18%, rgba(115, 10, 103, 0.884) 60%);
+        position: relative;        
+        padding-top: 15px;
+        border-radius: 5px;
+        .avatarGrid{
+            margin-top: 20px;
+            .avatar{
+                margin: auto;
+                width: 80px;
+                height: 80px;
+                font-size: 40px;
+            }
+        }
+        .emailGrid{
+            margin-top: 10px;
+            font-size: 20px;
+            color: #fff;
+            letter-spacing: 2px;
+            
+        }
+    }
+    .profileBody{
+        .credit-Grid{
+            margin-top: 20px;
+            padding-bottom: 10px;
+            font-size: 25px;
+            border-bottom: 1px solid #ffffff44;
+            color: #fff;
+            .addIcon{
+               background-color: #fff;
+               border-radius: 5px;
+               margin-left: 7px;
+            }
+            .addIcon:hover{
+               background-color: #979797;
+            }
+        }
+        .pass-Grid{
+            margin-top: 20px;
+            padding-bottom: 10px;
+            font-size: 22px;
+            border-bottom: 1px solid #ffffff44;
+            color: #fff;
+            .editIcon{
+               background-color: #fff;
+               border-radius: 5px;
+               margin-left: 7px;
+            }
+            .editIcon:hover{
+                background-color: #979797;
+            }
+        }
+        .logout-Grid{
+            margin-top: 30px;
+            button{
+                width: 70%;
+                height: 40px;
+                margin-top: 20px;
+                font-size: 15px;
+                color: #fff;
+                background-color: #5c0000dc;
+                border: none;
+                border-bottom: 1px solid white;
+                transition: all .5s;
+            }
+            button:hover{
+                background-color: #3d0000ce;
+                cursor: pointer;
+            }
+        }
+        .createAccount-Grid{
+            // margin-top: 30px;
+            button{
+                width: 70%;
+                height: 40px;
+                margin-top: 20px;
+                font-size: 15px;
+                color: #fff;
+                background-color: #1a5c00dc;
+                border: none;
+                border-bottom: 1px solid white;
+                transition: all .5s;
+            }
+            button:hover{
+                background-color: #073d00ce;
+                cursor: pointer;
+            }
+        }
+    }
+}

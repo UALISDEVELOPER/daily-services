@@ -1,7 +1,13 @@
 import React, {useEffect, useState} from 'react';
-//components
+import {Routes , Route} from "react-router-dom";
+
+//navbar components
 import MainNavBar from '../Navbar/MainNavBar';
 import PhoneNav from '../Navbar/PhoneNav';
+
+//components
+import Profile from '../profile/Profile';
+import MainPage from './MainPage';
 
 //style
 import "./style/home.scss"
@@ -26,7 +32,10 @@ const Home = () => {
                 :
                 <PhoneNav/>
             }
-            lksdflsdflskl
+            <Routes>
+                <Route path="/profile/" element={<Profile/>}/>
+                <Route path="/mainPage/" element={<MainPage/>}/>
+            </Routes>
         </div>
     );
 };

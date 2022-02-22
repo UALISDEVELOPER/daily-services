@@ -3,6 +3,7 @@
     backdrop-filter: blur(20px) saturate(140%) brightness(70%) !important;
     position: fixed !important;
     top: 0px !important;
+    z-index: 500;
     .logo{
         height: 50px;
         border-radius: 5px;
@@ -12,6 +13,15 @@
         font-size: 17px;
     }
     .menuItem:hover{
-        background-color:#6e6e6e !important ;
+        background-color:#5219405e !important ;
+    }
+    .main-menu-link{
+        text-decoration: none !important;
+        color: #ffffff;
+    }
+    #link{
+        font-size: xx-large !important;
+        text-decoration: none !important;
+
     }
 }

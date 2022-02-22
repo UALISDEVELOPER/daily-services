@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 //styles
 import "./styles/mainNav.scss"
@@ -49,6 +49,11 @@ const MainNavBar = () => {
     };
 
     const navigate = useNavigate();
+
+    const goToProfile = () =>{
+        navigate("/home/profile/");
+        handleCloseUserMenu();
+    }
 
     const logoutHandler = () =>{
         localStorage.clear();
@@ -125,7 +130,9 @@ const MainNavBar = () => {
                             sx={{ my: 2, color: 'white', display: 'block' }}
                             className='menuItem'
                         >
-                            Home
+                            <Link to="/home/" className='main-menu-link'>
+                                Home
+                            </Link>
                         </Button>
                         <Button
                             onClick={handleCloseNavMenu}
@@ -149,9 +156,8 @@ const MainNavBar = () => {
                         <Avatar
                             sx={{ bgcolor: deepOrange[500] }}
                             alt="Remy Sharp"
-                            src="/broken-image.jpg"
                         >
-                            {localStorage.getItem("user").split("")[0]}
+                            {localStorage.getItem("user").split("")[0].toLocaleUpperCase()}
                         </Avatar>
                         </IconButton>
                         </Tooltip>
@@ -171,9 +177,9 @@ const MainNavBar = () => {
                         open={Boolean(anchorElUser)}
                         onClose={handleCloseUserMenu}
                         >
-                        <MenuItem onClick={handleCloseUserMenu}>
-                            <AccountCircleIcon/>
-                            <Typography textAlign="center">Profile</Typography>
+                        <MenuItem onClick={goToProfile}>
+                                <AccountCircleIcon/>
+                                <Typography textAlign="center">Profile</Typography>
                         </MenuItem>
                         <MenuItem onClick={logoutHandler}>
                                 <LogoutIcon/>

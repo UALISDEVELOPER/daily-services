@@ -1,4 +1,6 @@
 import React, {useState}  from 'react';
+import { useNavigate, Link } from "react-router-dom";
+
 
 //MUI
 import BottomNavigation from '@mui/material/BottomNavigation';
@@ -17,6 +19,12 @@ const PhoneNav = () => {
 
     const [value, setValue] = useState(0);
 
+
+    const navigate = useNavigate();
+    const handleLink = (link) =>{
+        navigate(link)
+    }
+
     return (
         <div>
             <BottomNavigation
@@ -27,10 +35,10 @@ const PhoneNav = () => {
                 }}
                 className='PhoneNav'
             >
-                <BottomNavigationAction label="Home" icon={<HomeIcon />} />
-                <BottomNavigationAction label="Open Banking" icon={<AccountBalanceIcon/>} />
-                <BottomNavigationAction label="GOV" icon={<ContentPasteGoIcon/>}   />
-                <BottomNavigationAction label="Profile" icon={<AccountCircleIcon/>}   />
+                <BottomNavigationAction label="Home" icon={<HomeIcon />} onClick={()=> handleLink("/home/")}/>
+                <BottomNavigationAction label="Open Banking" icon={<AccountBalanceIcon/>} onClick={()=> handleLink("/home/")}/>
+                <BottomNavigationAction label="GOV" icon={<ContentPasteGoIcon/>}  onClick={()=> handleLink("/home/")} />
+                <BottomNavigationAction label="Profile" icon={<AccountCircleIcon/>} onClick={()=> handleLink("/home/profile/")}  />
             </BottomNavigation>
         </div>
     );

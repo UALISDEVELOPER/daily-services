@@ -83,4 +83,20 @@
             }
         }
     }
+    .loaderContainer{
+        position: fixed;
+        top: 35%;
+        .loaderDiv{
+            margin: auto;
+            width: 150px;
+            height: 150px;
+            border-radius: 5px;
+            backdrop-filter: blur(5px) saturate(150%) brightness(60%) !important;
+            .loader-inner-div{
+                width: fit-content;
+                margin: auto;
+                padding-top: 50px;
+            }
+        }
+    }
 }

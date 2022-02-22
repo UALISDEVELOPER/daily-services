@@ -30,10 +30,10 @@ const Profile = () => {
         navigate("/Signup")
     }
     return (
-        <Grid container className='profile-container'>
+        <Grid container spacing={1} className='profile-container'>
             <Grid xs={0} sm={3} md={4}></Grid>
             <Grid xs={12} sm={6} md={4}>
-                <Grid xs={12} className='profileBox'>
+                <Grid container className='profileBox'>
                     <Grid container className='profile-heading-div'>
                         <Grid xs={12}  className="avatarGrid">
                             <Avatar sx={{ bgcolor: deepPurple[500] }} className='avatar'>

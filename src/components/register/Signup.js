@@ -9,7 +9,8 @@ import { deepPurple } from '@mui/material/colors';
 import TextField from '@mui/material/TextField';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
-import LinearProgress from '@mui/material/LinearProgress';
+import CircularProgress from '@mui/material/CircularProgress';
+
 
 
 //MUI icons
@@ -119,13 +120,6 @@ const Signup = () => {
 
     return (
         <Grid container className='signup-container'>
-            {/* //=============Progress====================== */}
-                {loading &&
-                    <Grid xs={12}>
-                        <LinearProgress />
-                    </Grid>
-                }
-            {/* //=============Progress====================== */}
             <Grid xs={0} sm={3} md={4}></Grid>
             <Grid xs={12} sm={6} md={4}>
                 <Grid xs={12} className='signupBox'>
@@ -193,6 +187,22 @@ const Signup = () => {
                 </Alert>
             </Snackbar>
             {/* //================SnackBar============================= */}
+            {/* //=============Progress====================== */}
+            {loading &&
+                    <Grid container className='loaderContainer'>
+                        <Grid xs={4}></Grid>
+                        <Grid xs={4}>
+                            <div className='loaderDiv'>
+                                <div className='loader-inner-div'>
+                                    <CircularProgress/>
+                                </div>
+                            </div>
+                        </Grid>
+                        <Grid xs={4}></Grid>
+                    </Grid>
+                        
+                    }
+            {/* //=============Progress====================== */}
         </Grid>
 
     );

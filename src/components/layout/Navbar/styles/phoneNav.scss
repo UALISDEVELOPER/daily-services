@@ -2,9 +2,8 @@
     position: fixed;
     bottom: 0px;
     width: 100%;
-    background: rgb(121, 28, 155);
-        background: linear-gradient(141deg, rgba(121, 28, 155, 0.87) 18%, rgba(115, 10, 103, 0.884) 60%);
-    // backdrop-filter: blur(10px) saturate(100%) brightness(250%) !important;
+    background-color: #2349bbc7 !important;
+    backdrop-filter: blur(15px) saturate(100%) brightness(180%) !important;
     z-index: 500;
     .Mui-selected{
         color: #fff !important;

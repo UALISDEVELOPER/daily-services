@@ -19,7 +19,6 @@ function App() {
     const navigate = useNavigate()
 
     useEffect(()=>{
-      console.log(localStorage.length);
       !localStorage.length && navigate("/Login" ,{replace : true})
     },[])
   //===============login client test======================

@@ -20,8 +20,6 @@ const PhoneNav = () => {
     const [value, setValue] = useState(0);
 
     useEffect(()=>{
-        console.log(window.location.pathname);  
-        console.log(value);
         if(window.location.pathname ==="/home/mainPage/"){
             setValue(0)
         }else if (window.location.pathname ==="/home/openBanking/"){

@@ -19,7 +19,6 @@ const Home = () => {
     const [screenWidth , setScreenWidth] = useState(true);
 
     useEffect(()=>{
-        console.log(window.innerWidth);
         setScreenWidth(window.innerWidth);
     },[])
 
@@ -40,7 +39,7 @@ const Home = () => {
             <Routes>
                 <Route path="/profile/" element={<Profile/>}/>
                 <Route path="/mainPage/" element={<MainPage/>}/>
-                <Route path="/openBanking/" element={<OpenBanking/>}/>
+                <Route path="/openBanking//*" element={<OpenBanking/>}/>
                 <Route path="/Gov/" element={<Gov/>}/>
             </Routes>
         </div>

@@ -7,9 +7,10 @@ import Grid from '@mui/material/Grid';
 import Avatar from '@mui/material/Avatar';
 import { deepPurple } from '@mui/material/colors';
 import TextField from '@mui/material/TextField';
+import CircularProgress from '@mui/material/CircularProgress';
+//MUI snackbar
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
-import CircularProgress from '@mui/material/CircularProgress';
 
 
 //MUI icons
@@ -30,7 +31,7 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 const Login = () => {
     const navigate = useNavigate()
 
-    //===================SnachBar====================
+    //===================snackBar====================
 
     const [open, setOpen] = useState(false);
 
@@ -48,7 +49,7 @@ const Login = () => {
         setOpen(false);
     };
 
-    //===================SnachBar====================
+    //===================snackBar====================
 
     const [loading , setLoading] = useState(false);
 

@@ -11,6 +11,8 @@
         margin-top: 50px;
         height: unset !important;
         backdrop-filter: blur(10px) saturate(150%) brightness(60%) !important;
+        -webkit-box-shadow: 2px 2px 19px 13px rgba(0,0,0,0.8); 
+        box-shadow: 2px 2px 19px 13px rgba(0,0,0,0.8);
         padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 30px;

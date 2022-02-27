@@ -1,0 +1,84 @@
+.iban-container{
+    .iban-box{
+        margin-top: 30px;
+        margin-bottom: 100px;
+        min-height: 300px;
+        border-radius: 5px;
+        backdrop-filter: blur(5px) saturate(150%) brightness(75%) !important;
+        -webkit-box-shadow: 2px 2px 19px 13px rgba(0,0,0,0.8); 
+        box-shadow: 2px 2px 19px 13px rgba(0,0,0,0.8);
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 50px;
+        color: #fff;
+        transition: all .5s;
+        .intro-Grid{
+            text-align: left;
+            border-bottom: 1px solid #fff;
+            font-size: 18px;
+            height: fit-content;
+            .img-div{
+                margin: auto;
+                width: fit-content;
+                img{
+                    height: 40px;
+                    margin-top: 10px;
+                    border-radius: 5px;
+                    text-align: center;
+                }
+            }
+        }
+        .input-Grid{
+            margin-top: 40px !important;
+            .input-fields{
+                border-bottom: 2px solid #ffff !important;
+                margin-top: 10px;
+                height: fit-content;
+                label{
+                    color: #ffff !important;
+                }
+                input{
+                    color: #cccccc;
+                    text-align: center;
+                }
+            }
+        }
+        .button-Grid{
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 40px;
+            button{
+                width: 40%;
+                height: 40px;
+                margin-top: 20px;
+                margin: auto;
+                font-size: 15px;
+                color: #fff;
+                background-color: #ffffff48;
+                border: none;
+                border-bottom: 1px solid white;
+                transition: all .5s;
+            }
+            button:hover{
+                background-color: #a0a0a0a1;
+                cursor: pointer;
+            }
+        }
+        .response-Grid{
+            background-color: #ffffff38;
+            ul{
+                list-style: none;
+                padding: 0;
+                li{
+                    margin-top: 10px;
+                    padding: 5px;
+                    border-bottom: .5px solid #fff;
+                    span{
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+}

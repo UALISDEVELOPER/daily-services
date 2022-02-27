@@ -9,6 +9,7 @@ import bankInfoIcon from "./styles/img/openBankingIMG/bankInfo.png";
 import drivingIcon from "./styles/img/openBankingIMG/driving.png";
 import billIcon from "./styles/img/openBankingIMG/bill.png";
 import bank from "./styles/img/openBankingIMG/bank.png";
+import ibanInquiryIcon from "./styles/img/openBankingIMG/ibanInquiry.png";
 
 
 
@@ -17,7 +18,7 @@ export const OpenBankingList = [
         title : "Inquiry of received loans",
         decription : "This service can be used to display all the loans received by a person",
         icon : loanIcon,
-        link : "/home/openBanking/iban-inquiry/",
+        link : "/home/",
         status : "Coming soon",
         key : 1
     },
@@ -93,4 +94,12 @@ export const OpenBankingList = [
         status : "Coming soon",
         key : 10
     },
+    {
+        title : "Sheba number inquiry",
+        decription : "This service shows ",
+        icon : ibanInquiryIcon,
+        link : "/home/openBanking/iban-inquiry/",
+        status : "Available",
+        key : 11
+    }
 ]

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 
 //MUI 
@@ -10,7 +10,7 @@ import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 
 //styles
-import "./styles/ibanInquiry.scss";
+import "./styles/taxinquiry.scss";
 
 //icon 
 import logo from "./styles/img/logo.png";
@@ -22,8 +22,8 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 });
 //===============MUI snackBar ======================
 
-const IbanInqury = () => {
 
+const TaxInquiry = () => {
 
     //===================snackBar====================
 
@@ -58,7 +58,8 @@ const IbanInqury = () => {
     
     const valueHandler = (event) =>{
         setData({
-            iban : event.target.value,
+            ...data,
+            [event.target.name] : event.target.value,
         });
     }
 
@@ -71,7 +72,7 @@ const IbanInqury = () => {
         };
 
 
-        const URL = "https://micro.satpay.ir/api/open-banking/v1/iban/inquiry";
+        const URL = "https://micro.satpay.ir/api/gov/v1/tax/inquiry";
         const config = {
             headers: {
                 'Content-Type': 'application/json',
@@ -81,7 +82,8 @@ const IbanInqury = () => {
         }
         axios.post(URL , data, config)
             .then(response =>{
-                setTakenData(response.data.description.ibanInquiry.respObject)
+                console.log(response);
+                setTakenData(response.data.description.inquiryTax.followCode)
             })
             .catch(error => {
                 console.log(error.response);
@@ -98,15 +100,14 @@ const IbanInqury = () => {
             })
     }
 
-
     return (
-        <Grid container spacing={2} className='iban-container'>
+        <Grid container spacing={2} className='tax-container'>
             <Grid xs={0} sm={1} md={3}></Grid>
             <Grid xs={12} sm={10} md={6}>
-                <Grid container className='iban-box'>
+                <Grid container className='tax-box'>
                     <Grid container className='intro-Grid'>
                         <Grid xs={8} sm={9} >
-                            <p>This service shows inquiry of sheba number (iban) </p>
+                            <p>This service shows inquiry of tax code </p>
                         </Grid>
                         <Grid xs={4} sm={3} >
                             <div className='img-div'>
@@ -116,13 +117,25 @@ const IbanInqury = () => {
                     </Grid>
                     <Grid container className='input-Grid'>
                         <TextField
-                        type="iban"
-                        label="Sheba number (iban)"
+                        type="postCode"
+                        label="Post Code"
                         variant="standard"
                         fullWidth
                         className="input-fields"
-                        name="sheba"
-                        value={data.iban}
+                        name="postCode"
+                        value={data.postCode}
+                        onChange={valueHandler}
+                        />
+                    </Grid>
+                    <Grid container className='input-Grid'>
+                        <TextField
+                        type="nationalID"
+                        label="national ID"
+                        variant="standard"
+                        fullWidth
+                        className="input-fields"
+                        name="nationalID"
+                        value={data.nationalID}
                         onChange={valueHandler}
                         />
                     </Grid>
@@ -136,22 +149,7 @@ const IbanInqury = () => {
                                     <Grid xs={12} sm={8}>
                                         <ul>
                                             <li>
-                                                Iban Owner : <span>{takenData.firstName}  {takenData.lastName}</span>
-                                            </li>
-                                            <li>
-                                                Account Number : <span>{takenData.accountNumber}</span>
-                                            </li>
-                                            <li>
-                                                Account Status : <span>{takenData.accountStatus}</span>
-                                            </li>
-                                            <li>
-                                                Iban Number : <span>{takenData.ibanNumber}</span>
-                                            </li>
-                                            <li>
-                                                National Code : <span>{takenData.nationalCode}</span>
-                                            </li>
-                                            <li>
-                                                Bank Name : <span>{takenData.bank}</span>
+                                                Follow Code : <span>{takenData}</span>
                                             </li>
                                         </ul>
                                     </Grid>
@@ -172,4 +170,4 @@ const IbanInqury = () => {
     );
 };
 
-export default IbanInqury;
+export default TaxInquiry;

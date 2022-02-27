@@ -40,7 +40,7 @@ const Home = () => {
                 <Route path="/profile/" element={<Profile/>}/>
                 <Route path="/mainPage/" element={<MainPage/>}/>
                 <Route path="/openBanking//*" element={<OpenBanking/>}/>
-                <Route path="/Gov/" element={<Gov/>}/>
+                <Route path="/Gov//*" element={<Gov/>}/>
             </Routes>
         </div>
     );

@@ -13,8 +13,6 @@ const OpenBanking = () => {
             <Route path="/" element={<OpenBankingListPage/>}/>
             <Route path="/iban-inquiry" element={<IbanInqury/>}/>
         </Routes>
-
-
     );
 };
 

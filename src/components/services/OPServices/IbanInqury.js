@@ -48,9 +48,6 @@ const IbanInqury = () => {
     //===============taken data from server =================
 
     const [takenData, setTakenData] = useState(false)
-    useEffect(()=>{
-        console.log(takenData);
-    },[takenData])
 
     //===============taken data from server =================
 
@@ -91,8 +88,11 @@ const IbanInqury = () => {
                             localStorage.setItem("apiKey" , response.data.description.APIkey.APIkey);
                             sendData();
                         })
+                }else if (error.response.status === 422){
+                    setSnackBar({...snackBar, message : "Check out the form" , severity: "error" , autoHideDuration : 20000})
+                    setOpen(true);
                 }else{
-                    setSnackBar({...snackBar, message : error.response.data.description.details[0].message , severity: "error" , autoHideDuration : 20000})
+                    setSnackBar({...snackBar, message : error.response.data.description.message , severity: "error" , autoHideDuration : 20000})
                     setOpen(true);
                 }
             })

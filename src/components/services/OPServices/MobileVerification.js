@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState}  from 'react';
 import axios from 'axios';
 
 //MUI 
@@ -10,7 +10,7 @@ import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 
 //styles
-import "./styles/taxinquiry.scss";
+import "./styles/mobileverification.scss";
 
 //icon 
 import logo from "./styles/img/logo.png";
@@ -22,8 +22,7 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 });
 //===============MUI snackBar ======================
 
-
-const TaxInquiry = () => {
+const MobileVerification = () => {
 
     //===================snackBar====================
 
@@ -69,7 +68,7 @@ const TaxInquiry = () => {
         };
 
 
-        const URL = "https://micro.satpay.ir/api/gov/v1/tax/inquiry";
+        const URL = "https://micro.satpay.ir/api/open-banking/v1/shahkar/inquiry";
         const config = {
             headers: {
                 'Content-Type': 'application/json',
@@ -80,7 +79,8 @@ const TaxInquiry = () => {
         axios.post(URL , data, config)
             .then(response =>{
                 console.log(response);
-                setTakenData(response.data.description.inquiryTax.followCode)
+                console.log(response.data.description.shahkarInquiry.result);
+                setTakenData(response.data.description.shahkarInquiry.result)
             })
             .catch(error => {
                 console.log(error.response);
@@ -100,14 +100,21 @@ const TaxInquiry = () => {
             })
     }
 
+    const hey = () =>{
+        console.log(new Date().getTime());
+        const d = new Date().setFullYear(2012)
+        console.log(d);
+        console.log(new Date().getTime());
+    }
+
     return (
-        <Grid container spacing={2} className='tax-container'>
+        <Grid container spacing={2} className='mobile-container'>
             <Grid xs={0} sm={1} md={3}></Grid>
             <Grid xs={12} sm={10} md={6}>
-                <Grid container className='tax-box'>
+                <Grid container className='mobile-box'>
                     <Grid container className='intro-Grid'>
                         <Grid xs={8} sm={9} >
-                            <p>This service shows inquiry of tax code </p>
+                            <p onClick={hey}>This service shows inquiry of tax code </p>
                         </Grid>
                         <Grid xs={4} sm={3} >
                             <div className='img-div'>
@@ -117,13 +124,13 @@ const TaxInquiry = () => {
                     </Grid>
                     <Grid container className='input-Grid'>
                         <TextField
-                        type="postalCode"
-                        label="Postal Code"
+                        type="mobile"
+                        label="Mobile Number"
                         variant="standard"
                         fullWidth
                         className="input-fields"
-                        name="postalCode"
-                        value={data.postCode}
+                        name="mobile"
+                        value={data.mobile}
                         onChange={valueHandler}
                         />
                     </Grid>
@@ -147,11 +154,19 @@ const TaxInquiry = () => {
                                 <Grid container className='response-Grid'>
                                     <Grid xs={0} sm={2}></Grid>
                                     <Grid xs={12} sm={8}>
+                                        {takenData.isValid ?
                                         <ul>
                                             <li>
-                                                Follow Code : <span>{takenData}</span>
+                                                The national ID and telephone number belong to the same person 
                                             </li>
                                         </ul>
+                                        :
+                                        <ul>
+                                            <li>
+                                                The national ID and telephone number belong to the different person 
+                                            </li>
+                                        </ul>
+                                        }
                                     </Grid>
                                     <Grid xs={0}sm={2}></Grid>
                                 </Grid>
@@ -170,4 +185,4 @@ const TaxInquiry = () => {
     );
 };
 
-export default TaxInquiry;
+export default MobileVerification;

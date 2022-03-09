@@ -16,11 +16,11 @@ function App() {
 
   //===============login client test======================
 
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
-    useEffect(()=>{
-      !localStorage.length && navigate("/Login" ,{replace : true})
-    },[])
+    // useEffect(()=>{
+    //   !localStorage.length && navigate("/Login" ,{replace : true})
+    // },[])
   //===============login client test======================
 
   //============== set API key ==================================

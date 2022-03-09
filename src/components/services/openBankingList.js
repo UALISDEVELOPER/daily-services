@@ -50,8 +50,8 @@ export const OpenBankingList = [
         title : "Mobile number verification using national code",
         decription : "In this service the mobile number get validated by using the national code",
         icon : mobileVerificationIcon,
-        link : "/home/",
-        status : "Coming soon",
+        link : "/home/openBanking/mobile-verification/",
+        status : "Available",
         key : 5
     },
     {

@@ -37,12 +37,12 @@ const Profile = () => {
                     <Grid container className='profile-heading-div'>
                         <Grid xs={12}  className="avatarGrid">
                             <Avatar sx={{ bgcolor: deepPurple[500] }} className='avatar'>
-                                {localStorage.getItem("user").split("")[0].toLocaleUpperCase()}
+                                {/* {localStorage.getItem("user").split("")[0].toLocaleUpperCase()} */}
                             </Avatar>
                         </Grid>
                         <Grid xs={12} className='emailGrid'>
                             <Typography variant="p" gutterBottom component="div">
-                                {localStorage.getItem("user")}
+                                {/* {localStorage.getItem("user")} */}
                             </Typography>
                         </Grid>
                     </Grid>
@@ -58,7 +58,7 @@ const Profile = () => {
                         <Grid container className='pass-Grid'>
                             <Grid xs={6}>Account password :</Grid>
                             <Grid xs={6}>
-                                    {localStorage.getItem("pass")}
+                                    {/* {localStorage.getItem("pass")} */}
                                 <Tooltip title="Change password" arrow>
                                     <EditIcon className='editIcon' color="secondary" />
                                 </Tooltip>

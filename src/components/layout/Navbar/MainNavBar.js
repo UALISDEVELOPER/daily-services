@@ -161,7 +161,8 @@ const MainNavBar = () => {
                             sx={{ bgcolor: deepOrange[500] }}
                             alt="Remy Sharp"
                         >
-                            {localStorage.getItem("user").split("")[0].toLocaleUpperCase()}
+                            {/* {localStorage.getItem("user").split("")[0].toLocaleUpperCase()} */}
+                            
                         </Avatar>
                         </IconButton>
                         </Tooltip>
